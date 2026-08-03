@@ -1,0 +1,3 @@
+Im Nest liegt ein Zettel: "Fast geschafft! Zaehle die Blumen im
+Garten (garten/blumen.txt) — die ANZAHL der Rosen ist die erste
+Ziffer. Dann lies garten/giesskanne.txt."

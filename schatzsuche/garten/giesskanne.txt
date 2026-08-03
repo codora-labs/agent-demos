@@ -1,0 +1,3 @@
+In der Giesskanne klebt ein Zettel: Der Schatz-Code ist
+[Anzahl Rosen][7][1]. Schreibe ihn in die Datei SCHATZ.txt
+im Hauptordner — dann ist die Mission erfuellt!

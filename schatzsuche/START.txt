@@ -1,0 +1,2 @@
+Willkommen, Agent! Irgendwo in diesem Ordner liegt ein Schatz-Code.
+Erster Hinweis: Schau im Keller nach, in der Datei kiste.txt.
