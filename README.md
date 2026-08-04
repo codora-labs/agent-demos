@@ -82,19 +82,74 @@ und jede zusätzliche Datei würde genau das kaputtmachen.
 
 ## In Claude Code benutzen
 
+Einmal klonen:
+
 ```bash
 git clone https://github.com/codora-labs/agent-demos.git
+```
+
+### Übung 1 starten — Schatzsuche
+
+```bash
 cd agent-demos/schatzsuche
+../reset.sh
 claude
 ```
 
-Dann eingeben:
+Dann diesen Satz eingeben:
 
 ```text
-Lies CLAUDE.md und starte.
+Mach die Schatzsuche. Denk dabei laut mit.
 ```
 
-Das genügt. Fünf Dinge, die den Unterschied machen:
+### Übung 2 starten — Redaktion
+
+```bash
+cd agent-demos/redaktion
+../reset.sh --beispiel
+claude
+```
+
+Dann diesen Satz eingeben:
+
+```text
+Mach die Redaktions-Übung.
+```
+
+Mehr ist nicht nötig. Die Regeln liegen schon in den `CLAUDE.md`-Dateien und
+werden beim Start automatisch geladen — der Satz sagt nur, **welche** Übung
+gemeint ist. `../reset.sh` funktioniert aus dem Übungsordner heraus, man muss
+für den nächsten Durchlauf also nicht das Verzeichnis wechseln.
+
+Der Zusatz **«Denk dabei laut mit.»** ist optional und lohnt sich vor Publikum:
+gemessen an je zwei Läufen erzeugt er 5 statt 2 `🧠 GEDANKE`-Zeilen — dasselbe
+Ergebnis, dieselben 6 Werkzeug-Einsätze, aber man sieht das Rechnen zwischen den
+Schritten. In der Redaktions-Übung braucht es ihn nicht: dort ist ohnehin
+laufend zu sehen, was der Agent als Nächstes ändert.
+
+### Was der Agent dabei ansagt
+
+Vor **jedem** Werkzeug-Einsatz sagt er, wo im Loop er gerade steht:
+`SCHAUEN → DENKEN → HANDELN → PRÜFEN`. Welche Phasen tatsächlich auftauchen,
+hängt an der Übung — die beiden ergänzen sich absichtlich:
+
+| Phase | Heisst | `schatzsuche/` | `redaktion/` |
+|---|---|---|---|
+| `SCHAUEN` | etwas Neues holen | 5× (die Hinweiskette) | 1× (den Auftrag lesen) |
+| `DENKEN` | rechnen, überlegen | als `🧠 GEDANKE` nebenher | als `🧠 GEDANKE` nebenher |
+| `HANDELN` | etwas verändern | 1× (den Code schreiben) | 4× (schreiben, überarbeiten, Notizblock) |
+| `PRÜFEN` | ein Ergebnis kontrollieren | — | 2× (der Anruf beim Kritiker) |
+
+**`PRÜFEN` sieht man nur in der Redaktion.** Die Schatzsuche hat nichts zu
+prüfen — sie liest, rechnet und schreibt einmal. Wer den vollständigen Loop
+zeigen will, braucht beide Übungen; das ist der Grund, warum es zwei sind.
+
+`DENKEN` ist mit Absicht keine nummerierte Schritt-Zeile, sondern ein eigener
+`🧠 GEDANKE`-Marker: Denken verbraucht kein Werkzeug, und die Schritt-Nummern
+sollen genau die Werkzeug-Einsätze zählen — sonst stimmt die Zahl am Ende nicht
+mehr mit dem überein, was man mitgezählt hat.
+
+Fünf Dinge, die sonst noch den Unterschied machen:
 
 1. **Im Übungsordner starten.** Claude Code lädt automatisch die `CLAUDE.md` des
    Arbeitsverzeichnisses **und aller übergeordneten Ordner**. Aus
@@ -104,12 +159,12 @@ Das genügt. Fünf Dinge, die den Unterschied machen:
    zusätzlichen Schritt, weil der Agent die Aufgabe erst selbst nachlesen muss.
    Was **nicht** funktioniert: einen Übungsordner einzeln herauskopieren — dann
    fehlen die Regeln, und man sieht nur noch das Ergebnis.
-2. **Vor jedem Lauf zurücksetzen** — sonst liegt die Lösung vom letzten Mal noch
-   da und der Agent ist in drei Sekunden «fertig»:
-   ```bash
-   ./reset.sh              # beide Übungen zurücksetzen
-   ./reset.sh --beispiel   # zusätzlich die Platzhalter mit der getesteten Fassung füllen
-   ```
+2. **`reset.sh` nie überspringen.** Liegt die Lösung vom letzten Mal noch da,
+   ist der Agent in drei Sekunden «fertig» und man sieht gar nichts. Das
+   `--beispiel` der zweiten Übung füllt zusätzlich die beiden Platzhalter mit
+   der getesteten Fassung — ohne das benotet der Kritiker ins Blaue. Wer die
+   Platzhalter lieber selbst ausfüllt (der eigentliche Lerneffekt), lässt
+   `--beispiel` weg.
 3. **Nicht `claude -p` benutzen, um zuzuschauen.** Der Druck-Modus gibt nur die
    letzte Nachricht aus — die ganze Schritt-Narration ist darin unsichtbar, und
    ein funktionierender Lauf sieht aus wie ein kaputter. Interaktiv starten. Wer
@@ -192,6 +247,23 @@ angekündigte — 6 aus dem Übungsordner, 7 aus dem Hauptordner. Dauer und
 Rundenzahl sind es nicht: dieselbe Redaktions-Aufgabe brauchte einmal 2 Runden
 in 104 Sekunden und einmal 5 Runden in 7 Minuten. Abzählbar ist die Mechanik,
 nicht die Uhr — vor Publikum also keine Dauer versprechen.
+
+### Der Start-Satz
+
+Fünf weitere Sonnet-Läufe der Schatzsuche, nur der eingegebene Satz verändert.
+Alle sechs Werkzeug-Einsätze, alle Code 371 — der Satz beeinflusst also nicht,
+**ob** es klappt, sondern nur, wie viel Denken dabei sichtbar wird:
+
+| Eingegebener Satz | 🧠 GEDANKE-Zeilen | Schritte |
+|---|---|---|
+| `Mach die Schatzsuche.` | 2 (3 Läufe) | 6 |
+| `Mach die Schatzsuche. Denk dabei laut mit.` | 5 (2 Läufe) | 6 |
+
+Ebenfalls geprüft: `Lies CLAUDE.md und starte.` kostet **keinen** zusätzlichen
+Werkzeug-Einsatz — der Agent liest die Datei nicht nach, sie liegt beim Start
+bereits im Kontext. Der Satz ist trotzdem unnötig; «Mach die Schatzsuche.»
+sagt, welche der beiden Übungen gemeint ist, und funktioniert auch aus dem
+Hauptordner.
 
 ## Voraussetzungen
 
