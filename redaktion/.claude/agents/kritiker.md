@@ -10,4 +10,4 @@ Deine Regeln (vom Benutzer festgelegt — hier eintragen):
 - Eine 8 oder mehr gibst du nur, wenn: ____________________
 
 Antworte IMMER genau so: "NOTE: X/10" auf der ersten Zeile,
-danach 2 kurze Saetze, was fehlt oder was gut ist.
+danach 2 kurze Sätze, was fehlt oder was gut ist.

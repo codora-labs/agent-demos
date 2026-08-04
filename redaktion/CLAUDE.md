@@ -1,15 +1,13 @@
-# Regeln für dieses Projekt (mitlesbar!)
+# Übung: Redaktion
 
-Du arbeitest vor Publikum. Man schaut dir zu und lernt, dass ein Agent einen
-**zweiten Agenten** um Hilfe bitten kann: SCHAUEN → DENKEN →
-HANDELN → PRÜFEN, und für das PRÜFEN holst du dir den Kritiker.
+Es gelten die Regeln der `CLAUDE.md` im übergeordneten Ordner: Plan zuerst, ein
+Werkzeug pro Zug, eine Zeile vor jedem Werkzeug, das echte Werkzeug benennen,
+sparsam bleiben.
 
-WICHTIGSTE REGEL — kommentiere jeden Schritt sichtbar:
-Schreibe VOR jedem Werkzeug-Einsatz genau eine Zeile in diesem Format:
-🔄 SCHRITT <n> · <SCHAUEN|DENKEN|HANDELN|PRÜFEN> · Werkzeug: <Augen (Lesen)|Hände (Schreiben)|Kollege (Kritiker rufen)|keins> · <max. 10 Wörter, was du tust und warum>
-
-Wenn du nur nachdenkst (ohne Werkzeug), schreibe die Zeile mit «Werkzeug: keins».
-Sprache: Deutsch, einfach und konkret, keine Fachbegriffe ohne Erklärung.
+Hier kommt ein Werkzeug dazu, das die andere Übung nicht hat: du darfst einen
+**zweiten Agenten** um Hilfe bitten. In der Schritt-Zeile heisst er
+`Kollege (Kritiker rufen)`. Man soll genau sehen, WANN ein zweiter Agent
+startet.
 
 ## Dein Auftrag
 
@@ -21,20 +19,26 @@ Sprache: Deutsch, einfach und konkret, keine Fachbegriffe ohne Erklärung.
 
 ## Regeln für die Kritiker-Runden
 
-- **Vor jedem Kritiker-Aufruf** eine Schritt-Zeile mit «Werkzeug: Kollege
-  (Kritiker rufen)». Man soll sehen, WANN ein zweiter Agent startet.
-- **Nach jeder Runde** eine Zeile im Format:
+- **Nach jeder Runde** schreibst du diese Zeile **zweimal**: einmal sichtbar in
+  den Chat, und einmal ans Ende von `noten.txt`. Format:
   `📊 RUNDE <n> · Note <x>/10 · <max. 8 Wörter, was der Kritiker bemängelt hat>`
+  Nur im Notizblock reicht nicht — wer zuschaut, liest den Chat.
+- Sag vor jeder Verbesserung in einem Satz, WAS du jetzt änderst und WARUM.
+  Nicht einfach neu schreiben.
+- **Erfinde niemals eine Note selbst.** Die Note kommt ausschliesslich vom
+  Kritiker. Wenn er keine Note liefert, ruf ihn erneut auf.
+- Höchstens 6 Runden. Wenn nach 6 Runden keine 8 erreicht ist, hör auf und sag
+  ehrlich, woran es gescheitert ist.
 
 ## Dein Notizblock: `noten.txt`
 
 Ein Agent denkt nicht im Kopf — er schreibt mit. `noten.txt` ist dein sichtbarer
-Notizblock: man darf jederzeit hineinschauen und den Verlauf nachlesen,
-auch wenn im Chat längst nach oben gescrollt wurde.
+Notizblock: man darf jederzeit hineinschauen und den Verlauf nachlesen, auch
+wenn im Chat längst nach oben gescrollt wurde.
 
 - Hänge nach **jeder** Runde die `📊 RUNDE …`-Zeile dort an.
 - Notiere darunter mit `📝`, was du als Nächstes änderst — **bevor** du es tust.
-- Kündige jedes Schreiben in den Notizblock mit einer normalen Schritt-Zeile an
+- Jedes Schreiben in den Notizblock ist ein normaler Schritt mit eigener Zeile
   («Werkzeug: Hände (Schreiben)»). Er ist kein Geheimversteck.
 
 Beispiel für den Aufbau:
@@ -44,12 +48,6 @@ Beispiel für den Aufbau:
 📝 Nächste Änderung: mit dem Sturm einsteigen, Piraten einführen
 📊 RUNDE 2 · Note 9/10 · Schluss jetzt witzig
 ```
-- Sag vor jeder Verbesserung in einem Satz, WAS du jetzt änderst und WARUM.
-  Nicht einfach neu schreiben.
-- Erfinde niemals eine Note selbst. Die Note kommt ausschliesslich vom
-  Kritiker. Wenn er keine Note liefert, ruf ihn erneut auf.
-- Höchstens 6 Runden. Wenn nach 6 Runden keine 8 erreicht ist, hör auf und
-  sag ehrlich, woran es gescheitert ist.
 
 ## Abschluss
 
@@ -60,7 +58,11 @@ Regeln den Kritiker am meisten beeinflusst hat.
 
 ## Was du NICHT tust
 
-- Die Regeln in `.claude/agents/kritiker.md` **nicht** selbst ändern oder
-  ergänzen — die kommen vom Benutzer.
+- **`.claude/agents/kritiker.md` nicht lesen.** Der Kritiker soll dich
+  überraschen. Wer die Bewertungsregeln vorher kennt, schreibt die erste Fassung
+  direkt auf die Note hin — dann gibt es nur eine Runde, und der
+  Verbesserungs-Loop, den man sehen soll, fällt aus.
+- Die Regeln in `.claude/agents/kritiker.md` auch nicht ändern oder ergänzen —
+  die kommen vom Benutzer.
 - `AUFTRAG.txt` nicht umschreiben.
 - Nicht ausserhalb dieses Ordners lesen oder schreiben.

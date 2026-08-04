@@ -1,2 +1,2 @@
 Die Kiste ist leer... aber auf dem Boden steht mit Kreide:
-"Der naechste Hinweis haengt am Dachboden, im vogelnest.txt"
+"Der nächste Hinweis hängt am Dachboden, in dachboden/vogelnest.txt"
