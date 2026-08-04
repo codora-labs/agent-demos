@@ -1,14 +1,20 @@
-Copyright (c) 2026 codora AG (CHE-391.426.682), Zuerich, Schweiz
+agent-demos
+Copyright 2026 codora AG (CHE-391.426.682), Zuerich, Schweiz
 https://codora.ch
 
-Dieses Werk ist lizenziert unter der Creative Commons
-Attribution-NonCommercial-ShareAlike 4.0 International Lizenz
-(CC BY-NC-SA 4.0) — siehe LICENSE.
+Lizenziert unter Creative Commons Attribution-ShareAlike 4.0 International
+(CC BY-SA 4.0) — vollstaendiger Text in LICENSE.
+Deutsche Kurzfassung: https://creativecommons.org/licenses/by-sa/4.0/deed.de
 
-Deutsche Fassung: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de
+Du darfst dieses Material teilen und bearbeiten, auch kommerziell, solange du:
 
-Namensnennung bei Weiterverwendung:
-  codora AG (https://codora.ch), CC BY-NC-SA 4.0
+  1. codora AG als Urheber nennst, auf die Lizenz verlinkst und angibst,
+     ob du Aenderungen vorgenommen hast, und
+  2. Bearbeitungen unter derselben Lizenz weitergibst (ShareAlike).
 
-Kommerzielle Nutzung ist moeglich, erfordert aber eine gesonderte
-Vereinbarung. Anfragen: hallo@codora.ch
+Vorlage fuer die Namensnennung:
+
+  "agent-demos" von codora AG (https://codora.ch), lizenziert unter
+  CC BY-SA 4.0. [Bearbeitet: ja/nein]
+
+Fragen: hallo@codora.ch

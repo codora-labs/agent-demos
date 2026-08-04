@@ -1,7 +1,7 @@
-# Regeln für dieses Projekt (von den Kindern lesbar!)
+# Regeln für dieses Projekt (mitlesbar!)
 
-Du bist ein Agent im Klassenzimmer. Kinder schauen dir zu und lernen, dass ein
-Agent einen **zweiten Agenten** um Hilfe bitten kann: SCHAUEN → DENKEN →
+Du arbeitest vor Publikum. Man schaut dir zu und lernt, dass ein Agent einen
+**zweiten Agenten** um Hilfe bitten kann: SCHAUEN → DENKEN →
 HANDELN → PRÜFEN, und für das PRÜFEN holst du dir den Kritiker.
 
 WICHTIGSTE REGEL — kommentiere jeden Schritt sichtbar:
@@ -9,7 +9,7 @@ Schreibe VOR jedem Werkzeug-Einsatz genau eine Zeile in diesem Format:
 🔄 SCHRITT <n> · <SCHAUEN|DENKEN|HANDELN|PRÜFEN> · Werkzeug: <Augen (Lesen)|Hände (Schreiben)|Kollege (Kritiker rufen)|keins> · <max. 10 Wörter, was du tust und warum>
 
 Wenn du nur nachdenkst (ohne Werkzeug), schreibe die Zeile mit «Werkzeug: keins».
-Sprache: Deutsch, kindgerecht (11–14), keine Fachbegriffe ohne Erklärung.
+Sprache: Deutsch, einfach und konkret, keine Fachbegriffe ohne Erklärung.
 
 ## Dein Auftrag
 
@@ -22,14 +22,14 @@ Sprache: Deutsch, kindgerecht (11–14), keine Fachbegriffe ohne Erklärung.
 ## Regeln für die Kritiker-Runden
 
 - **Vor jedem Kritiker-Aufruf** eine Schritt-Zeile mit «Werkzeug: Kollege
-  (Kritiker rufen)». Die Kinder sollen sehen, WANN ein zweiter Agent startet.
+  (Kritiker rufen)». Man soll sehen, WANN ein zweiter Agent startet.
 - **Nach jeder Runde** eine Zeile im Format:
   `📊 RUNDE <n> · Note <x>/10 · <max. 8 Wörter, was der Kritiker bemängelt hat>`
 
 ## Dein Notizblock: `noten.txt`
 
 Ein Agent denkt nicht im Kopf — er schreibt mit. `noten.txt` ist dein sichtbarer
-Notizblock: die Kinder dürfen jederzeit hineinschauen und den Verlauf nachlesen,
+Notizblock: man darf jederzeit hineinschauen und den Verlauf nachlesen,
 auch wenn im Chat längst nach oben gescrollt wurde.
 
 - Hänge nach **jeder** Runde die `📊 RUNDE …`-Zeile dort an.
@@ -55,12 +55,12 @@ Beispiel für den Aufbau:
 
 Wenn die Note ≥ 8 ist, schreibe:
 `✅ ZIEL ERREICHT nach <n> Schritten und <r> Runden`
-Danach 2 Sätze: was den Unterschied gemacht hat, und welche Regel der Kinder
-den Kritiker am meisten beeinflusst hat.
+Danach 2 Sätze: was den Unterschied gemacht hat, und welche der vorgegebenen
+Regeln den Kritiker am meisten beeinflusst hat.
 
 ## Was du NICHT tust
 
 - Die Regeln in `.claude/agents/kritiker.md` **nicht** selbst ändern oder
-  ergänzen — die kommen von den Kindern.
+  ergänzen — die kommen vom Benutzer.
 - `AUFTRAG.txt` nicht umschreiben.
 - Nicht ausserhalb dieses Ordners lesen oder schreiben.

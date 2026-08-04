@@ -2,21 +2,21 @@
 
 # agent-demos
 
-**Zwei kleine Übungen, an denen Kinder (11–14) sehen, wie ein KI-Agent arbeitet — Werkzeug für Werkzeug.**
+**Zwei kleine Übungen, die sichtbar machen, wie ein KI-Agent arbeitet — Werkzeug für Werkzeug.**
 
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-blue)](LICENSE)
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-blue)](LICENSE)
 [![Keine Installation](https://img.shields.io/badge/Installation-keine-green)](#schnellstart)
 [![Sprache: Deutsch](https://img.shields.io/badge/Sprache-Deutsch-lightgrey)](#)
 
 </div>
 
-Ein Agent, der einfach «fertig» meldet, ist für Kinder eine Blackbox. Beide Übungen
+Ein Agent, der einfach «fertig» meldet, ist eine Blackbox. Beide Übungen
 zwingen den Agenten deshalb, **vor jedem Werkzeug-Einsatz eine Zeile zu schreiben** —
 welchen Schritt er macht, welches Werkzeug er nimmt, und warum. Aus einem
 undurchsichtigen Vorgang wird etwas, das man mitlesen, vorhersagen und abzählen kann.
 
-Das sind die Marker, auf die die Kinder achten — `CLAUDE.md` erzwingt sie in
-jeder Übung:
+Das sind die Marker, auf die man achtet — `CLAUDE.md` erzwingt sie in jeder
+Übung:
 
 | Marker | Wo | Wofür |
 |---|---|---|
@@ -31,12 +31,12 @@ Die Schritt-Zeile hat ein festes Format:
 🔄 SCHRITT <n> · <SCHAUEN|DENKEN|HANDELN|PRÜFEN> · Werkzeug: <Augen (Lesen)|Hände (Schreiben)|Kollege (Kritiker rufen)|keins> · <max. 10 Wörter>
 ```
 
-Der Notizblock ist die zweite Hälfte: das Kind sieht nicht nur, *was* passiert,
+Der Notizblock ist die zweite Hälfte: man sieht nicht nur, *was* passiert,
 sondern auch, *was der Agent vorhat*. In `schatzsuche/` gibt es bewusst keinen —
 diese Übung soll die Werkzeug-Einsätze abzählbar halten (4× lesen, 1× schreiben),
 und jede zusätzliche Schreiboperation würde genau das kaputtmachen.
 
-Beide Übungen sind im Kurs gelaufen (Messung 03.08.2026):
+Beide Übungen sind live gelaufen (Messung 03.08.2026):
 
 | Übung | Dauer | Ergebnis |
 |---|---|---|
@@ -48,15 +48,15 @@ Beide Übungen sind im Kurs gelaufen (Messung 03.08.2026):
 - **[`schatzsuche/`](schatzsuche/)** — Der Agent folgt einer Hinweiskette durch
   Ordner, muss unterwegs etwas zählen und schreibt das Ergebnis in eine Datei.
   Zeigt den Loop: mehrfach lesen → denken → einmal schreiben → selbst stoppen.
-- **[`redaktion/`](redaktion/)** — Die Kinder legen die Regeln eines **Subagenten**
+- **[`redaktion/`](redaktion/)** — Man legt die Regeln eines **Subagenten**
   fest (was er liebt, was er hasst, ab wann es eine 8 gibt). Der Hauptagent
   schreibt eine Geschichte, lässt sie benoten und überarbeitet sie, bis die Note
   stimmt. Zeigt: ein Agent kann einen anderen Agenten rufen.
-- **Beobachtbar statt erklärt** — die Kinder sagen den nächsten Schritt voraus
-  und haken ihn ab, statt einen Vortrag über Agenten zu hören.
+- **Beobachtbar statt erklärt** — man sagt den nächsten Schritt voraus und hakt
+  ihn ab, statt einen Vortrag über Agenten zu hören.
 - **Nichts zu installieren** — reine Text- und Ordnerstrukturen.
 - **Absichtlich unfertig** — die Kritiker-Regeln und das Geschichten-Thema sind
-  Platzhalter. Sie werden im Kurs von den Kindern diktiert, nicht vorgegeben.
+  Platzhalter. Sie werden beim Durchführen selbst festgelegt, nicht vorgegeben.
 
 ## Schnellstart
 
@@ -89,15 +89,15 @@ versehentlich im Repository.
 
 ## Die Platzhalter füllen
 
-Vor der Redaktions-Übung tragen die Kinder ihre Regeln ein:
+Vor der Redaktions-Übung werden die Regeln eingetragen:
 
 | Datei | Was hineingehört | Vorlage |
 |---|---|---|
 | `redaktion/.claude/agents/kritiker.md` | Was der Kritiker liebt, hasst, und wann es eine 8 gibt | `kritiker.beispiel.md` |
 | `redaktion/AUFTRAG.txt` | Thema der Geschichte + maximale Länge | `AUFTRAG.beispiel.txt` |
 
-Die `.beispiel`-Dateien sind die im Kurs getestete Fassung. Sie funktionieren, wenn
-gerade keine Zeit zum Diktieren ist — der eigentliche Lerneffekt entsteht aber beim
+Die `.beispiel`-Dateien sind die getestete Fassung. Sie funktionieren, wenn gerade
+keine Zeit zum Festlegen ist — der eigentliche Lerneffekt entsteht aber beim
 Selbst-Festlegen.
 
 > Die `CLAUDE.md`-Dateien sind kein Platzhalter. Sie enthalten das
@@ -113,10 +113,11 @@ Datei-Schreiben und — in `redaktion/` — Subagenten.
 ## Verwandt
 
 - [`game-starter-kit`](https://github.com/codora-labs/game-starter-kit) — das
-  Null-Abhängigkeits-Paket, mit dem die Kinder danach ihr eigenes Spiel bauen.
+  Null-Abhängigkeits-Paket, um danach ein eigenes Spiel zu bauen.
 
 ## Lizenz
 
-[CC BY-NC-SA 4.0](LICENSE) — © 2026 codora AG. Nutzung im eigenen Unterricht
-ausdrücklich erwünscht, Namensnennung vorausgesetzt. Kommerzielle Nutzung auf
-Anfrage: hallo@codora.ch
+[CC BY-SA 4.0](LICENSE) — © 2026 codora AG. Teilen und bearbeiten ausdrücklich
+erwünscht, **auch kommerziell**. Zwei Bedingungen: codora AG nennen (mit
+Lizenzlink und Hinweis, ob geändert wurde) und Bearbeitungen unter derselben
+Lizenz weitergeben. Vorlage für die Namensnennung steht in [`NOTICE`](NOTICE).
